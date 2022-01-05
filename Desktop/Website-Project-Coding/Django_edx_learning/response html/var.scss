@@ -1,0 +1,52 @@
+//auto convert scss to css
+// sass --watch var.scss:var.css
+
+$color: red;
+
+div{
+    font-size: 18px;
+
+    p{
+        color: blue;
+    }
+
+    ul{
+        color: green;
+    }
+}
+
+
+ul{
+    font-size: 14px;
+    color: $color;
+}
+
+ol {
+    font-size: 16px;
+    color: $color;
+}
+
+
+%message{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+.success{
+    @extend %message;
+    background-color: green;
+}
+
+.danger{
+    @extend %message;
+    background-color: red;
+}
+
+.warning{
+    @extend %message;
+    background-color: yellow;
+}
